@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reena Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+/* PARTICLES */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* CURSOR */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(56,189,248,0.3);
+    position: fixed;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px #38bdf8;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s, background 0.2s;
+}
+
+/* CURSOR HOVER STATE */
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2);
+    background: rgba(56,189,248,0.6);
+    box-shadow: 0 0 30px #38bdf8;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    padding: 20px;
+    color: #38bdf8;
+}
+
+/* GLASS */
+.glass {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.glass.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+}
+
+/* TYPING */
+.typing {
+    color: #38bdf8;
+}
+
+/* 3D STACK */
+.scene {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    gap: 15px;
+    transform-style: preserve-3d;
+}
+
+.key {
+    height: 80px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transform: translateZ(20px);
+    transition: 0.3s;
+}
+
+.key:hover {
+    transform: translateZ(60px) scale(1.2);
+    box-shadow: 0 0 25px currentColor;
+}
+
+/* COLORS */
+.fa-android { color: #3ddc84; }
+.fa-java { color: #f89820; }
+.fa-python { color: #3776AB; }
+.fa-html5 { color: #e34c26; }
+.fa-docker { color: #0db7ed; }
+.fa-git-alt { color: #f1502f; }
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* CONTACT */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-icons i {
+    font-size: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+<div class="cursor" id="cursor"></div>
+
+<nav>Reena Portfolio</nav>
+
+<div class="glass hero">
+    <h1>​🇭​​🇮​,​🇮​ ​🇦​​🇲​ ​🇷​​🇪​​🇪​​🇳​​🇦​ 🎀
+
+</h1>
+</div>
+<p><span class="typing"></span></p>
+<div class="glass">
+    <h2>About Me</h2>
+    <p>
+Hi, I'm Reena 👋 — a passionate BCA student specializing in AI and Machine Learning. 
+I enjoy building real-world applications, especially in Android development and full-stack technologies and also in python.
+
+I have hands-on experience with tools and technologies like Java, Python, MongoDB, MySQL, Docker, and .NET. 
+I love creating user-friendly applications and continuously improving my skills by working on practical projects.
+
+Currently, I am focused on developing impactful projects and looking for opportunities where I can grow, learn, and contribute as a developer.
+
+ </p>
+</div>
+
+<div class="glass">
+    <h2 style="text-align:center;">Tech Stack</h2>
+
+    <div class="scene">
+        <div class="keyboard" id="keyboard">
+
+            <div class="key"><i class="fab fa-android"></i></div>
+            <div class="key"><i class="fab fa-java"></i></div>
+            <div class="key"><i class="fab fa-python"></i></div>
+            <div class="key"><i class="fab fa-html5"></i></div>
+            <div class="key">My Sql</div>
+            <div class="key">Mongosh</div>
+            <div class="key">Redis</div>
+            <div class="key">html</div>
+            <div class="key"><i class="fab fa-docker"></i></div>
+            <div class="key"><i class="fab fa-git-alt"></i></div>
+            <div class="key">.NET</div>
+
+        </div>
+    </div>
+</div>
+
+<div class="glass">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card hover-target">User Profile App</div>
+        <div class="card hover-target">To-Do App</div>
+        <div class="card hover-target">Notes App</div>
+    </div>
+</div>
+
+<div class="glass">
+    <h2 style="text-align:center;">Contact</h2>
+    <div class="contact-icons">
+        <a href="#" class="hover-target"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="hover-target"><i class="fab fa-github"></i></a>
+        <a href="#" class="hover-target"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+
+<footer>© 2026 Reena</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 }
+  }
+});
+
+const text = ["Android Developer", "AI/ML Student", "Freelancer"];
+let i = 0, j = 0, current = "", deleting = false;
+
+function type() {
+    if (i < text.length) {
+        if (!deleting && j <= text[i].length) {
+            current = text[i].substring(0, j++);
+        } else if (deleting && j >= 0) {
+            current = text[i].substring(0, j--);
+        }
+
+        document.querySelector(".typing").innerHTML = current;
+
+        if (j == text[i].length) deleting = true;
+        if (j == 0) { deleting = false; i++; }
+
+        setTimeout(type, deleting ? 50 : 100);
+    }
+}
+type();
+
+const sections = document.querySelectorAll(".glass");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+
+const cursor = document.getElementById("cursor");
+let mouseX = 0, mouseY = 0;
+let posX = 0, posY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    posX += (mouseX - posX) * 0.1;
+    posY += (mouseY - posY) * 0.1;
+
+    cursor.style.left = posX + "px";
+    cursor.style.top = posY + "px";
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+const hoverTargets = document.querySelectorAll(".hover-target");
+
+hoverTargets.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        cursor.classList.add("hover");
+    });
+
+    el.addEventListener("mouseleave", () => {
+        cursor.classList.remove("hover");
+    });
+});
+
+const keyboard = document.getElementById("keyboard");
+
+document.addEventListener("mousemove", (e) => {
+    let x = (window.innerWidth / 2 - e.pageX) / 25;
+    let y = (window.innerHeight / 2 - e.pageY) / 25;
+
+    keyboard.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+</script>
+
+</body>
+</html>
